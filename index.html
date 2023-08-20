@@ -192,8 +192,9 @@
                   <span class=" font-semibold">Have coupon?</span>
                 </label>
                 <label class="input-group">
-                  <input type="text" placeholder="Coupon code" class="input input-bordered" />
-                  <span class="bg-[#E527B2] text-white">Apply</span>
+                  <input type="text" placeholder="Coupon code" id="inputField" class="input input-bordered" />
+                 
+                  <span class="bg-[#E527B2] text-white" onclick="check()"  id="discount-btn">Apply</span>
                 </label>
               </div>
               </div>
@@ -212,12 +213,12 @@
             
                 <div class="border-t-2">
                     <p class=" font-semibold">Total price: <span id="withoutdistotal">00</span>TK</p>
-                    <p  class=" font-semibold">Discount : <span>00</span> TK</p>
-                    <p  class=" font-semibold">Total: <span>00</span> TK</p>
+                    <p  class=" font-semibold" >Discount : <span id="discount">00</span> TK</p>
+                    <p  class=" font-semibold">Total: <span id="GrandTotal">00</span> TK</p>
                   </div>
                 
                  <div class="border-t-2">
-                  <button class="bg-[#E527B2] w-[300px] text-white mt-[25px] rounded-md p-2 " onclick="my_modal_1.showModal()">Make Purchase</button>
+                  <button class="bg-[#E527B2] w-[300px] text-white mt-[25px] rounded-md p-2 "  id="gohomebtn"  onclick="my_modal_1.showModal()">Make Purchase</button>
                 </div> 
 
                 <!-- Open the modal using ID.showModal() method -->
@@ -228,7 +229,7 @@
               <p class="py-4 text-center">Your Purchase the product</p>
              <div class="modal-action ">
       <!-- if there is a button in form, it will close the modal -->
-             <button class="btn bg-[#E527B2] text-white rounded-md p-2 w-[200px] mr-[130px]">Go Home</button>
+             <button class="btn bg-[#E527B2] text-white rounded-md p-2 w-[200px] mr-[130px]" >Go Home</button>
     </div>
   </form>
 </dialog>
