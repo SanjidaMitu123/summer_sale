@@ -1,20 +1,24 @@
 
 
 let total = 0 ;
+let i= 1  ;
 function clickwork(target){
     const selectedItemContainer = document.getElementById("selected-item");
 const itemname= target.childNodes[3].childNodes[3].innerText;
+   
+   
 const li = document.createElement("li");
-    li.innerText = itemname ;
+    li.innerText = i+"."+itemname ;
+    i++;
+   
     selectedItemContainer.appendChild(li);
 
     const price1 = target.childNodes[3].childNodes[5].childNodes[0].innerText;
     total  = parseInt(total )+ parseInt (price1);
     document.getElementById("withoutdistotal").innerText = total ;
+    document.getElementById("GrandTotal").innerText = total  ;
 
 }
-
-
 
 
 function check(){
@@ -41,7 +45,6 @@ function check(){
             {
                 alert("Sorry. Wrong Cuppon");
             }
-
     
         })
         
@@ -51,6 +54,7 @@ function check(){
 
 document.getElementById('gohomebtn').addEventListener('click',function (){
 
+    i = 1;
     document.getElementById("selected-item") .innerText = '';
     document.getElementById('inputField'). value = '';
     total = 0;
