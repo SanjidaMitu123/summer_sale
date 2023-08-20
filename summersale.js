@@ -51,11 +51,10 @@ function check(){
 
 document.getElementById('gohomebtn').addEventListener('click',function (){
 
+    document.getElementById("selected-item") .innerText = '';
     document.getElementById('inputField'). value = '';
-  
     total = 0;
     document.getElementById("withoutdistotal").innerText = total ;
-  
     discount = 0 ;
     document.getElementById("discount").innerText = discount.toFixed(2)  ;
     grandtotal = 0;
